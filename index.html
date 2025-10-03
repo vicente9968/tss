@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="game-panel">
+      <header class="game-header">
+        <h1>贪吃蛇</h1>
+        <div class="score-board">
+          <span>分数：<strong id="score">0</strong></span>
+          <span>最高分：<strong id="highScore">0</strong></span>
+        </div>
+      </header>
+      <canvas id="game" width="420" height="420" role="img" aria-label="贪吃蛇游戏画布"></canvas>
+      <footer class="controls" aria-live="polite">
+        <p id="status">按空格或点击开始游戏</p>
+        <div class="buttons">
+          <button id="startBtn" type="button">开始 / 暂停</button>
+          <button id="restartBtn" type="button">重新开始</button>
+        </div>
+      </footer>
+    </section>
+    <aside class="how-to">
+      <h2>玩法说明</h2>
+      <ol>
+        <li>使用方向键或 W / A / S / D 控制蛇的移动。</li>
+        <li>吃到食物即可加分并让身体变长。</li>
+        <li>撞到墙壁或蛇身游戏结束。</li>
+        <li>移动端可使用屏幕上的虚拟方向键。</li>
+      </ol>
+      <div class="mobile-controls" aria-hidden="true">
+        <button data-dir="up" aria-label="向上">▲</button>
+        <div class="middle">
+          <button data-dir="left" aria-label="向左">◀</button>
+          <button data-dir="down" aria-label="向下">▼</button>
+          <button data-dir="right" aria-label="向右">▶</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
